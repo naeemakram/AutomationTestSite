@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <title>Web Elements | Hyperlinks</title>
+</head>
+
+<body>
+    <header class="fluid-container bg-light text-dark mb-2">
+        <div class="container">
+          <div class="jumbotron">
+            <h1>Introduction to Test Automation with Selenium</h1>
+            <p>Learn software test automation from an experience QA and teacher</p>
+          </div>  
+        </div>
+      </header> 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4" id="navbar-outer-panel">
+            </div>
+            <div class="col-6">
+                <h2 class="mb-5">Form Example.</h2>
+                <form class="row g-3">
+                    <div class="col-md-6">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name">
+                      </div>
+                    <div class="col-md-6">
+                      <label for="email_id" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email_id">
+                    </div>
+
+                    <div class="col-6">
+                      <label for="inputaddress1" class="form-label">Address 1</label>
+                      <input type="text" class="form-control" id="inputaddress1" placeholder="1234 Main St">
+                    </div>
+                    <div class="col-6">
+                      <label for="inputaddress2" class="form-label">Address 2</label>
+                      <input type="text" class="form-control" id="inputaddress2" placeholder="Apartment, studio, or floor">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="city" class="form-label">City</label>
+                      <input type="text" class="form-control" id="city">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="inputState" class="form-label">State</label>
+                      <select id="state" class="form-select">
+                        <option selected>Choose State</option>
+                        <option>Abc</option>
+                        <option>Xyz</option>
+                      </select>
+                    </div>
+                    <div class="col-md-2">
+                      <label for="zip" class="form-label">Zip</label>
+                      <input type="text" class="form-control" id="zip">
+                    </div>
+                    <fieldset class="col-md-6 mb-3">
+                        <legend class="col-form-label col-sm-2 pt-0">Sex</legend>
+                        <div class="col-sm-10">
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="Male" checked>
+                            <label class="form-check-label" for="gridRadios1">
+                              Male
+                            </label>
+                           </div>
+                           <div class="form-check"> 
+                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="Female">
+                            <label class="form-check-label" for="gridRadios2">
+                              Female
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="Others" >
+                            <label class="form-check-label" for="gridRadios3">
+                              Other
+                            </label>
+                          </div>
+                        </div>
+                    </fieldset>
+                    <div class="col-md-6 mb-3">
+                        
+                        <legend class="col-form-label col-sm-2 pt-0">Skills</legend>
+                        <div class="col-sm-10 offset-sm-2">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="skillOne">
+                            <label class="form-check-label" for="skillOne">
+                              Manual QA
+                            </label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="skilltwo">
+                            <label class="form-check-label" for="skilltwo">
+                              Automated QA
+                            </label>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-primary" id="signin">Sign in</button>
+                    </div>
+                </form>
+                <p id="text-paste"></p>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="swatches/sidenav.js"></script>    
+    <script>
+      $(document).ready(function(){
+        $('#navbar-outer-panel').append(window.sidenav);
+        $("#signin").on('click',function(event){
+            let name_string = '<strong>Name : </strong>'+$('#name').val();  
+            let email_string = '<strong>Email : </strong>'+$('#email_id').val();
+            let address1_string = '<strong>Address 1 : </strong>'+$('#inputaddress1').val();
+            let address2_string = '<strong>Address 2 : </strong>'+$('#inputaddress2').val();
+            let csz = 'City/State/Zip : '+$('#city').val()+' '+$('#state').val()+' '+$('#zip').val();
+            let final_string = name_string+'<br/>'+email_string+'<br/>'+address1_string+'<br/>'+address2_string+'<br/>'+csz;
+            $('#text-paste').html(final_string);
+        });
+        $("#reset-ta").on('click',function(){
+          $('#text-paste').html('');
+        });
+      });
+    </script>
+</body>
+
+</html>
