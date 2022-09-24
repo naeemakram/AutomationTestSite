@@ -36,10 +36,14 @@
     window.sidenav +='</h2>';
     window.sidenav +='<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">';
     window.sidenav +='<div class="accordion-body">';
-    window.sidenav +='<strong>This is the third items accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. Its also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.';
+    window.sidenav +='<ul class="list-group">';
+    window.sidenav +='<li class="list-group-item"><a href="windows.html" class="btn btn-link" >Browser Windows</a></li>';
+    window.sidenav +='<li class="list-group-item"><a href="alerts.html" class="btn btn-link" >Alerts</a></li>';
+    window.sidenav +='<li class="list-group-item"><a href="frames.html" class="btn btn-link" >Frames</a></li>';
+    window.sidenav +='<li class="list-group-item"><a href="nframes.html" class="btn btn-link" >Nested Frames</a></li>';
+    window.sidenav +='<li class="list-group-item"><a href="modal.html" class="btn btn-link" >Modal Dialogs</a></li>';
+    window.sidenav +='</ul>';
     window.sidenav +='</div>';
     window.sidenav +='</div>';
     window.sidenav +='</div>';
     window.sidenav +='</div>';
-
-
