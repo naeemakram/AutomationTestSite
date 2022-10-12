@@ -14,7 +14,8 @@
 </head>
 
 <body>
-    <header class="fluid-container bg-light text-dark mb-2">
+    <div class="fluid-container bg-dark" id="topnavbar"></div>
+    <header class="fluid-container bg-dark text-light mb-2">
         <div class="container">
           <div class="jumbotron">
             <h1>Introduction to Test Automation with Selenium</h1>
@@ -28,11 +29,10 @@
             </div>
             <div class="col-8">
                 <h2 class="mb-5">Some Examples of Hyperlinks. They can be opened in current or new tab.</h2>
-
                 <label>Broken Image</label><br/>
                 <img src="somimage.jpg" class="img-thumbnail" id="image_thumb"/><br/><br/><br/>
-                <a href="hyperlinks.html" target="_blank" class="btn btn-link" id="hyperlink1">Working Link</a><br/>
-                <a href="http://the-internet.herokuapp.com/status_codes/500" target="_blank"  id="brokenlink" class="btn btn-link">Broken Link</a><br/>
+                <a href="hyperlinks.html" class="btn btn-link" id="hyperlink1">Working Link</a><br/>
+                <a href="http://the-internet.herokuapp.com/status_codes/500"  id="brokenlink" class="btn btn-link">Broken Link</a><br/>
             </div>
         </div>
     </div>
@@ -44,11 +44,6 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <script src="swatches/sidenav.js"></script>    
-    <script>
-      $(document).ready(function(){
-        $('#navbar-outer-panel').append(window.sidenav);
-      });
-    </script>
 </body>
 
 </html>

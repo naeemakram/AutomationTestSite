@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-    <title>Web Elements | Alerts</title>
+    <title>Web Elements | Range Slider</title>
 </head>
 
 <body>
@@ -27,40 +27,30 @@
         <div class="row">
             <div class="col-4" id="navbar-outer-panel">
             </div>
-            <div class="col-8">
-                <h2>Examples of Alerts.</h2>
-                <button class="btn btn-primary" id="open_alert">Open Alert</button>&nbsp;&nbsp;&nbsp;&nbsp;
-                <button class="btn btn-success" id="open_confirm_box">Open Confirm Box</button>&nbsp;&nbsp;&nbsp;&nbsp;
-                <button class="btn btn-info" id="open_Input_box">Open Information Box</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="col-4">
+                <h2>Range Slider</h2>
+                <br><br>
+                <label for="customRange1" class="form-label">Range Slider</label>
+                <input type="range" class="form-range" id="customRange1" value="54">
             </div>
         </div>
     </div>
+
     <!-- Optional JavaScript; choose one of the two! -->
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-    <script src="swatches/sidenav.js"></script>    
+    <script src="swatches/sidenav.js"></script>  
     <script>
-      $(document).ready(function(){
-        $("#collapseOne").removeClass('show');
-        $("#collapseThree").addClass('show');
-        $("#ButtonOne").addClass('collapsed');
-        $("#ButtonThree").removeClass('collapsed');
-      });
-      $(document).ready(function(){
-        $("#open_alert").on('click',function(){
-          window.alert('Alert Example');
+        $(document).ready(function(){
+          $("#collapseOne").removeClass('show');
+          $("#collapseFour").addClass('show');
+          $("#ButtonOne").addClass('collapsed');
+          $("#ButtonFour").removeClass('collapsed');
         });
-        $("#open_confirm_box").on('click',function(){
-          window.confirm('Confirm Example');
-        });
-        $("#open_Input_box").on('click',function(){
-          window.prompt("Please enter your name:", "");
-        });
-      });
-    </script>
+      </script>      
 </body>
 
 </html>

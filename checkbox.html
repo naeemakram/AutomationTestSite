@@ -14,7 +14,8 @@
 </head>
 
 <body>
-    <header class="fluid-container bg-light text-dark mb-2">
+  <div class="fluid-container bg-dark" id="topnavbar"></div>
+  <header class="fluid-container bg-dark text-light mb-2">
         <div class="container">
           <div class="jumbotron">
             <h1>Introduction to Test Automation with Selenium</h1>
@@ -46,6 +47,24 @@
                       Disabled Checkbox
                     </label>
                 </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="autoenable" disabled>
+                  <label class="form-check-label" for="autoenable">
+                    I will enable in one second.
+                  </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="autoenablewithdelay" checked>
+                <label class="form-check-label" for="autoenablewithdelay">
+                  Click me and I will respond in a while.
+                </label>
+              </div><br>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="enableByBtn">
+                <label class="form-check-label" for="enableByBtn">
+                  <button class="btn btn-primary btn-sm" id="toggleCheckbox">Enable/Disable</button>
+                </label>
+              </div>
             </div>
         </div>
     </div>
@@ -59,7 +78,6 @@
     <script src="swatches/sidenav.js"></script>    
     <script>
       $(document).ready(function(){
-        $('#navbar-outer-panel').append(window.sidenav);
         $("#dynamic1btn").on('click',function(){
             if($(this).hasClass('btn-primary'))
             {
@@ -81,8 +99,40 @@
                 $(this).removeClass('btn-dark');
                 $(this).addClass('btn-primary');
             }
-//btn-dark
+            
         });
+      });
+      setTimeout(function(){
+        $("#autoenable").removeAttr("disabled");
+      },1000);
+      $("#enableByBtn").on('click',function(){
+        event.preventDefault();
+      });
+      $("#toggleCheckbox").on('click',function(){
+
+        if($("#enableByBtn").prop("checked") === true){
+            $("#enableByBtn").prop("checked", false);
+          }
+          else
+          {
+            $("#enableByBtn").prop("checked", true);
+          }
+
+
+      });
+
+      $("#autoenablewithdelay").on('click',function(event){
+        event.preventDefault();
+        setTimeout(function(){
+          if($("#autoenablewithdelay").prop("checked") === true){
+            $("#autoenablewithdelay").prop("checked", false);
+          }
+          else
+          {
+            $("#autoenablewithdelay").prop("checked", true);
+          }
+
+      },1000);
       });
     </script>
 </body>

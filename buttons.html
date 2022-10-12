@@ -14,7 +14,8 @@
 </head>
 
 <body>
-    <header class="fluid-container bg-light text-dark mb-2">
+  <div class="fluid-container bg-dark" id="topnavbar"></div>
+  <header class="fluid-container bg-dark text-light mb-2">
         <div class="container">
           <div class="jumbotron">
             <h1>Introduction to Test Automation with Selenium</h1>
@@ -45,7 +46,6 @@
     <script src="swatches/sidenav.js"></script>    
     <script>
       $(document).ready(function(){
-        $('#navbar-outer-panel').append(window.sidenav);
         $('#clicker').on('click',function(event){
 
           $('#alert-panel').html('<div class="alert alert-info" role="alert">First button is clicked.</div>');
