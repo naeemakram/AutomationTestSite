@@ -14,7 +14,8 @@
 </head>
 
 <body>
-    <header class="fluid-container bg-light text-dark mb-2">
+  <div class="fluid-container bg-dark" id="topnavbar"></div>
+  <header class="fluid-container bg-dark text-light mb-2">
         <div class="container">
           <div class="jumbotron">
             <h1>Introduction to Test Automation with Selenium</h1>
@@ -28,19 +29,25 @@
             </div>
             <div class="col-6">
                 <h2 class="mb-5">Text Area and Text box example</h2>
-
+              <form action="#">
                 <div class="mb-3">
-                    <label for="em`/.ail_id" class="form-label">Email address</label>
+                    <label for="email_id" class="form-label">Email address</label>
                     <input type="email" class="form-control" id="email_id" placeholder="name@example.com">
                   </div>
                   <div class="mb-3">
-                    <label for="address_area" class="form-label">Address</label> 
-                    <textarea class="form-control" id="address_area" rows="3"></textarea>
+                    <label for="numeric_input" class="form-label">Email address</label>
+                    <input type="number" class="form-control" id="numeric_input" placeholder="Numeric Values Only" required>
                   </div>
-                  <button class="btn btn-primary" id="submitter-ta" >Submit</button>&nbsp;&nbsp;&nbsp;
+
+                  <div class="mb-3">
+                    <label for="address_area" class="form-label">Address</label> 
+                    <textarea class="form-control" id="address_area" rows="3" minlength="5" required></textarea>
+                  </div>
+                  <button class="btn btn-primary" id="submitter-ta" type="submit" >Submit</button>&nbsp;&nbsp;&nbsp;
                   <button class="btn btn-dark " id="reset-ta" >Reset</button>
 
                   <p class="mt-5" id="text-paste"></p>
+              </form>
             </div>
         </div>
     </div>
@@ -54,7 +61,6 @@
     <script src="swatches/sidenav.js"></script>    
     <script>
       $(document).ready(function(){
-        $('#navbar-outer-panel').append(window.sidenav);
         $("#submitter-ta").on('click',function(event){
           let email_string = '<strong>Email : </strong>'+$('#email_id').val();
           let address_string = '<strong>Address : </strong>'+$('#address_area').val();
@@ -64,6 +70,7 @@
         $("#reset-ta").on('click',function(){
           $('#text-paste').html('');
         });
+        return false;
       });
     </script>
 </body>

@@ -14,7 +14,8 @@
 </head>
 
 <body>
-    <header class="fluid-container bg-light text-dark mb-2">
+  <div class="fluid-container bg-dark" id="topnavbar"></div>
+  <header class="fluid-container bg-dark text-light mb-2">
         <div class="container">
           <div class="jumbotron">
             <h1>Introduction to Test Automation with Selenium</h1>
@@ -120,7 +121,6 @@
     <script src="swatches/sidenav.js"></script>    
     <script>
       $(document).ready(function(){
-        $('#navbar-outer-panel').append(window.sidenav);
         $("#signin").on('click',function(event){
             let name_string = '<strong>Name : </strong>'+$('#name').val();  
             let email_string = '<strong>Email : </strong>'+$('#email_id').val();
@@ -133,6 +133,9 @@
         });
         $("#collapseOne").removeClass('show');
         $("#collapseTwo").addClass('show');
+        $("#ButtonOne").addClass('collapsed');
+        $("#ButtonTwo").removeClass('collapsed');
+        
         $("#reset-ta").on('click',function(){
           $('#text-paste').html('');
         });
